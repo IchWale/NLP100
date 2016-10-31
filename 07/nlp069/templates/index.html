@@ -1,0 +1,39 @@
+{% extends "style.html" %}
+{% block content %}
+<div class="jumbotron">
+    <div class="container" style="width:700px;">
+        <form method="GET" action="send"　class="col-sm-6">
+            <div class="form-group row">
+              <label class="col-xs-2 col-form-label">name</label>
+              <div class="col-xs-10">
+                <input class="form-control" type="text" name="name">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-xs-2 col-form-label">aliase</label>
+              <div class="col-xs-10">
+                <input class="form-control" type="search" name="aliase">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-xs-2 col-form-label">area</label>
+              <div class="col-xs-10">
+                <input class="form-control" type="search" name="area">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-xs-2 col-form-label">tag</label>
+              <div class="col-xs-10">
+                <input class="form-control" type="search" name="tag">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+    <div class="container" >
+        {% block results %}
+        {% endblock %}
+    </div>
+
+</div>
+{% endblock %}

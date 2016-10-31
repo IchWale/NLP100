@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+{% block results %}
+<table class="table">
+	<thead>
+		<tr>
+		{% for field in fields %}
+			<th>{{field}}</th>
+		{% endfor %}
+		</thead>
+		<tbody>
+		{% for artist in results %}
+			<tr>
+			{% for field in fields %}
+				<td>{{artist[field]}}</td>
+			{% endfor %}
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}
