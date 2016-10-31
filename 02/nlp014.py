@@ -7,7 +7,6 @@
 print("行数:")
 N = int(input())
 
-f = open("hightemp.txt", "r", encoding="utf-8")
-
-for i in range(N):
-    print(f.readline())
+with open("hightemp.txt", "r", encoding="utf-8") as f:
+    for i in range(N):
+        print(f.readline())

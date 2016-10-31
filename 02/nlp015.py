@@ -8,8 +8,8 @@
 print("行数:")
 N = int(input())
 
-f = open("hightemp.txt", "r", encoding="utf-8")
-lines = f.readlines()
+with open("hightemp.txt", "r", encoding="utf-8") as f:
+    lines = f.readlines()
 
 for i in range(N):
     print(lines[-N+i])

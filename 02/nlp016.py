@@ -7,8 +7,8 @@
 print("何分割:")
 N = int(input())
 
-f = open("hightemp.txt", "r", encoding="utf-8")
-lines = f.readlines()
+with open("hightemp.txt", "r", encoding="utf-8") as f
+    lines = f.readlines()
 
 n = len(lines) // N
 a = len(lines) % N

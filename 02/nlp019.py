@@ -4,11 +4,11 @@
 # 各行の1列目の文字列の出現頻度を求め，その高い順に並べて表示せよ．
 # 確認にはcut, uniq, sortコマンドを用いよ．
 
-f = open("hightemp.txt", "r", encoding="utf-8")
-
 word_list=[]
-for line in f:
-    word_list.append(line.split()[0])
+
+with open("hightemp.txt", "r", encoding="utf-8") as f:
+    for line in f:
+        word_list.append(line.split()[0])
 
 freq_dic = {}
 for word in word_list:

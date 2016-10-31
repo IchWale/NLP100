@@ -5,13 +5,12 @@
 
 import re
 
-
-f = open("jawiki-britain.txt", "r", encoding="utf-8")
 pattern = re.compile(r"(={2,})([^=]+)(={2,})")
 
-for line in f:
-    match = re.search(pattern, line)
-    if match:
-        print(match.group())
-        print("セクション名:{}, レベル:{}".format(match.group(2), len(match.group(1))-1))
+with open("jawiki-britain.txt", "r", encoding="utf-8") as f:
+    for line in f:
+        match = re.search(pattern, line)
+        if match:
+            print(match.group())
+            print("セクション名:{}, レベル:{}".format(match.group(2), len(match.group(1))-1))
 

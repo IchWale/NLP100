@@ -7,9 +7,9 @@
 
 f_col1 = open("col1.txt", "r", encoding="utf-8")
 f_col2 = open("col2.txt", "r", encoding="utf-8")
-
 f_col3 = open("col3.txt", "w", encoding="utf-8")
 
-for line1, line2 in zip(f_col1, f_col2):
-    line1 = line1.replace("\n", "")
-    f_col3.write(line1 + "\t" + line2)
+with f_col1, f_col2, f_col3:
+    for line1, line2 in zip(f_col1, f_col2):
+        line1 = line1.replace("\n", "")
+        f_col3.write(line1 + "\t" + line2)

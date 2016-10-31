@@ -8,8 +8,8 @@
 # 10. 行数のカウント
 # 行数をカウントせよ．確認にはwcコマンドを用いよ
 
-f = open("hightemp.txt", "r", encoding="utf-8")
-print(len(f.readlines()))
+with open("hightemp.txt", "r", encoding="utf-8") as f:
+    print(len(f.readlines()))
 
 # UNIXコマンド
 # あとで

@@ -7,11 +7,10 @@
 
 import re
 
-
-f = open("jawiki-britain.txt", "r", encoding="utf-8")
 pattern = re.compile(r"File:([^|]+)\|")
 
-for line in f:
-    match = re.search(pattern, line)
-    if match:
-        print(match.group(1))
+with open("jawiki-britain.txt", "r", encoding="utf-8") as f:
+    for line in f:
+        match = re.search(pattern, line)
+        if match:
+            print(match.group(1))

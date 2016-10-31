@@ -14,18 +14,15 @@
 
 import json
 
-f = open("jawiki-country.json", "r", encoding="utf-8")
-
-for line in f:
-    data = json.loads(line)
-    if data["title"] == "イギリス":
-        print(data["text"])
-        with open("jawiki-britain.txt", "w", encoding="utf-8") as f2:
-            f2.write(data["text"])
-        # WindowsだとたぶんUnicodeEncodeErrorになるので以下をつかう
-        # 泥臭い方法だけど、これしか思いつかないand調べてもすぐにわからない.
-        # print(data["text"].encode("sjis", "ignore").decode("sjis"))
-f.close()
+with open("jawiki-country.json", "r", encoding="utf-8") as f:
+    for line in f:
+        data = json.loads(line)
+        if data["title"] == "イギリス":
+            print(data["text"])
+            with open("jawiki-britain.txt", "w", encoding="utf-8") as f2:
+                f2.write(data["text"])
+            # WindowsだとたぶんUnicodeEncodeErrorになるので以下をつかう
+            # print(data["text"].encode("sjis", "ignore").decode("sjis"))
 
 """
 めも

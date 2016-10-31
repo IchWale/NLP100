@@ -17,8 +17,8 @@ def remove_emphasis(info_list):
 
 
 if __name__ == '__main__':
-    f = open("jawiki-britain.txt", "r", encoding="utf-8")
-    text = f.read()
+    with open("jawiki-britain.txt", "r", encoding="utf-8") as f:
+        text = f.read()
     info_list = parse_info(text)
     info_list = remove_emphasis(info_list)
     for info in info_list:
