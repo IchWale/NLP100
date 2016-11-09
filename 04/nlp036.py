@@ -13,7 +13,6 @@ def word_freq(all_sentences):
     """
     read_mecab()の出力から、単語の頻度を求める
     辞書に記録してから, 頻度の降順にタプルのリストに変換して返す.
-    辞書をそのまま返すことも可能.
     args:
         all_sentences: list, read_mecab()で出力される形式のリスト
     return:

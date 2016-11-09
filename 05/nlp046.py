@@ -19,7 +19,7 @@ def case_pattern(chunk_list, dst_pos):
     args:
         dst_pos: str, 品詞
     return:
-        [(動詞のMorph, (助詞のMorph, ...), (助詞を含むChunk, ...)), ...]
+        [((動詞のMorph, (助詞のMorph, ...), (助詞を含むChunk, ...)), ...]
     """
     case_list = []
     chunk_dep_list = set_src_chunk(chunk_list)

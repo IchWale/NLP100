@@ -23,6 +23,7 @@ def dep_to_graph(chunk_dep_list):
     chunkの係り関係のタプルからグラフを作成する関数
     """
     g = Digraph(format="png")
+    # 日本語表示のためのフォントを設定
     g.attr("node", fontname="TakaoPGothic")
     for chunk_dep in chunk_dep_list:
         g.edge(chunk_dep[0].get_surf(), 

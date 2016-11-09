@@ -90,7 +90,6 @@ def read_cabocha(file_name):
     """
     複数行のCaboChaの解析結果から、1行ごとに切り出して処理を行い、
     各行をChunkオブジェクトのリストとする関数
-    全文を読み込み、全文のchunkリストを返すので容量の大きなファイルは扱えないかも
     args:
         file_neme: str, MeCabの解析結果のファイル名
     return:

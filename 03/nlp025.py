@@ -29,9 +29,3 @@ if __name__ == '__main__':
     info_list = parse_info(text)
     for info in info_list:
         print("{}: \n{}\n".format(info[0], info[1]))
-
-"""
-めも
-
-.+?の意味を今更知る
-"""
