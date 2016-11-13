@@ -127,8 +127,8 @@ def parse_chunk(cabocha_text):
             match = re.search(pattern, line)
             num = int(match.group(1))
             dst = int(match.group(2))
-            srcs_list[int(match.group(2))].append(int(match.group(1)))
-            srcs = srcs_list[int(match.group(1))]
+            srcs_list[dst].append(num)
+            srcs = srcs_list[num]
         elif line == "EOS":
             if morph_list:
                 chunk_list.append(Chunk(morph_list, num, dst, srcs))
